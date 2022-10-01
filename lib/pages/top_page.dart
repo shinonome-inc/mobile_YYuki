@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_yyuki/pages/feed_page.dart';
 
 import '../ui_components/thin_long_rounded_button.dart';
 
@@ -61,7 +62,12 @@ class _TopPageState extends State<TopPage> {
               ThinLongRoundedButton(
                 text: 'ログイン',
                 backgroundColor: const Color(0xFF468300),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const FeedPage()),
+                  );
+                },
               ),
               ThinLongRoundedButton(
                 text: 'ログインせずに利用する',
